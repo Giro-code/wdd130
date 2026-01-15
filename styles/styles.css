@@ -29,6 +29,10 @@ main {
 main img {
     width: 150px;
     height: auto;
+    border: 1px solid rgb(0 0 0 / 0.5);
+    padding: 1rem;
+    background-color: #333;
+    color: aqua;
 }
 
 p {
@@ -41,7 +45,6 @@ aside {
     border: 1px solid rgb(0 0 0 / 5.2);
     padding: 1rem;
     background-color: burlywood;
-    box-shadow: #333;
     color: #333;
     text-align: center;
 }
