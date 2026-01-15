@@ -32,6 +32,8 @@ main img {
     border: 1px solid rgb(0 0 0 / 0.5);
     padding: 1rem;
     background-color: #333;
+    box-shadow: color(0 0 0 / 0.2);
+    box-shadow: 1px;
     color: aqua;
 }
 
