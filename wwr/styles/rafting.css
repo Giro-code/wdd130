@@ -11,7 +11,7 @@
     --text-light: #FFFFFF;
 
     /* Accent colors */
-    --accent1-color: #A3A85B;
+    --accent1-color: yellow;
     /* Olive accent */
     --accent2-color: #14532D;
     /* Jungle green */
@@ -66,7 +66,7 @@ article {
     margin: 5px;
     padding: 10px;
     border: solid 3px rgba(0, 0, 0, 1);
-    color: #889d1d;
+    color: white;
     background-color: var(--accent2-color);
     font-weight: 600;
 }
