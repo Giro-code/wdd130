@@ -1,14 +1,16 @@
 :root {
-    /* Soft gray */
-    --primary-color: #dde0da;
-    /* Tropical teal */
+    /*  Base clara (background clear) */
+    --primary-color: #E6E9E2;
+    /* Azul-verde del agua (principal visual) */
     --secondary-color: #0F766E;
-    /* Sun / safety yellow */
-    --accent1-color: #929558;
-    /* Jungle green */
+    /* Verde oliva MÁS limpio */
+    --accent1-color: #A3A85B;
+    /* Verde selva profundo */
     --accent2-color: #14532D;
-    --heading-font: "Times New Roman", "Georgia";
-    --body-font: Arial, Helvetica, sans-serif;
+    --heading-font: "Oswald", sans-serif;
+    --body-font: "Montserrat",
+        Arial,
+        sans-serif;
 }
 
 * {
@@ -43,12 +45,12 @@ footer {
 }
 
 h1 {
-    font-family: var(--body-font);
+    font-family: var(--heading-font);
     color: var(--heading-color);
 }
 
 h2 {
-    font-family: var(--body-font);
+    font-family: var(--heading-font);
     color: var(--secondary-color);
 }
 
@@ -101,6 +103,10 @@ h1 {
 }
 
 article {
+    position: relative;
+}
+
+.hero article {
     position: relative;
 }
 
