@@ -1,16 +1,20 @@
 :root {
-    /*  Base clara (background clear) */
+    /* Backgrounds */
     --primary-color: #E6E9E2;
-    /* Azul-verde del agua (principal visual) */
+    /* Soft light background */
     --secondary-color: #0F766E;
-    /* Verde oliva MÁS limpio */
+    /* Water / teal */
+
+    /* Text colors */
+    --text-dark: #1F2933;
+    /* Main text */
+    --text-light: #FFFFFF;
+
+    /* Accent colors */
     --accent1-color: #A3A85B;
-    /* Verde selva profundo */
+    /* Olive accent */
     --accent2-color: #14532D;
-    --heading-font: "Oswald", sans-serif;
-    --body-font: "Montserrat",
-        Arial,
-        sans-serif;
+    /* Jungle green */
 }
 
 * {
@@ -20,8 +24,9 @@
 }
 
 body {
+    background-color: var(--primary-color);
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    color: var(--text-dark);
 }
 
 body header img {
@@ -33,7 +38,7 @@ body header img {
 
 header {
     background-color: var(--secondary-color);
-    color: var(--accent2-color);
+    color: var(--text-light);
     border: solid 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -51,7 +56,7 @@ h1 {
 
 h2 {
     font-family: var(--heading-font);
-    color: var(--secondary-color);
+    color: var(--accent2-color);
 }
 
 nav,
@@ -62,7 +67,8 @@ article {
     padding: 10px;
     border: solid 3px rgba(0, 0, 0, 1);
     color: #889d1d;
-    background-color: var(--primary-color);
+    background-color: var(--accent2-color);
+    font-weight: 600;
 }
 
 .hero {
@@ -104,10 +110,11 @@ h1 {
 
 article {
     position: relative;
+
 }
 
 .hero article {
-    position: relative;
+    position: absolute;
 }
 
 .hero article img {
