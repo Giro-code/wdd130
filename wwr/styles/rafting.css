@@ -15,6 +15,8 @@
     /* Olive accent */
     --accent2-color: #14532D;
     /* Jungle green */
+    --heading-font: 'Oswald', sans-serif;
+    --body-font: 'Montserrat', sans-serif;
 }
 
 * {
