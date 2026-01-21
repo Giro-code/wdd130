@@ -1,10 +1,10 @@
 :root {
     /* Deep river blue */
-    --primary-color: #889d1d;
+    --primary-color: #dde0da;
     /* Tropical teal */
     --secondary-color: #0F766E;
     /* Sun / safety yellow */
-    --accent1-color: #FACC15;
+    --accent1-color: #929558;
     /* Jungle green */
     --accent2-color: #14532D;
     --heading-font: "Times New Roman", "Georgia";
@@ -61,6 +61,7 @@ article {
     padding: 10px;
     border: solid 3px rgba(0, 0, 0, 1);
     color: #889d1d;
+    background-color: var(--primary-color);
 }
 
 .hero {
