@@ -23,6 +23,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -31,24 +32,28 @@ body {
     color: var(--text-dark);
 }
 
-body header img {
-    margin-left: 32%;
-    top: 25px;
-    padding: 10px;
-    position: relative;
-}
-
 header {
     background-color: var(--secondary-color);
     color: var(--text-light);
     border: solid 10px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
 
-header,
 main,
 footer {
     width: 90%;
     margin: 0 auto;
+}
+
+header nav {
+    background-color: goldenrod;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex: start;
+
 }
 
 h1 {
