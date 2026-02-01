@@ -78,6 +78,14 @@ article {
     font-weight: 600;
 }
 
+.gallery {
+    width: 30px;
+    height: auto;
+    border: solid black 2px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
 .hero {
     position: relative;
 }
