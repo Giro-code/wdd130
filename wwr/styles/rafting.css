@@ -112,23 +112,18 @@ h2 {
     color: white;
 }
 
-/* Overlay article centered WITHOUT transform */
 .hero article {
-    position: absolute;
-    top: 76%;
-    left: 0;
-    right: 0;
-    bottom: 15px;
-    width: 75%;
-    margin: 0 auto;
-
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    margin: 10px 0;
     background: rgba(255, 255, 255, 0.85);
     color: #111;
 
     border: solid 3px rgba(0, 0, 0, 0.35);
     padding: 10px;
-
-    overflow: auto;
 }
 
 .hero article p {
@@ -136,10 +131,11 @@ h2 {
 }
 
 .hero article img {
-    float: right;
-    width: 125px;
+    float: none;
+    display: block;
+    width: 120px;
+    margin: 10px auto;
     border: 3px solid rosybrown;
-    margin: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
@@ -192,6 +188,10 @@ footer {
 .socialmedia {
     display: flex;
     gap: 1rem;
+}
+
+.socialmedia a {
+    text-decoration: none;
 }
 
 .socialmedia img {
