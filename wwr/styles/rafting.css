@@ -1,22 +1,17 @@
 :root {
     /* Backgrounds */
     --primary-color: #E6E9E2;
-    /* Soft light background */
     --secondary-color: #0F766E;
-    /* Water / teal */
 
     /* Text colors */
     --text-dark: #1F2933;
-    /* Main text */
     --text-light: #FFFFFF;
 
     /* Accent colors */
     --accent1-color: yellow;
-    /* Olive accent */
     --accent2-color: #14532D;
-    /* Jungle green */
-    --heading-color: black;
 
+    --heading-color: #1F2933;
     --heading-font: 'Oswald', sans-serif;
     --body-font: 'Montserrat', sans-serif;
 }
@@ -34,30 +29,47 @@ body {
     color: var(--text-dark);
 }
 
-header {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-    border: solid 10px rgba(0, 0, 0, 0.25);
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-}
-
+/* Layout width */
 main,
 footer {
     width: 90%;
     margin: 0 auto;
 }
 
-header nav {
-    background-color: goldenrod;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex: start;
+/* Header */
+header {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: solid 10px rgba(0, 0, 0, 0.25);
 
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
 }
 
+header img {
+    width: 140px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+header nav a {
+    background: white;
+    color: #111;
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Headings */
 h1 {
     font-family: var(--heading-font);
     color: var(--heading-color);
@@ -65,19 +77,74 @@ h1 {
 
 h2 {
     font-family: var(--heading-font);
-    color: var(--accent1-color);
+    color: var(--heading-color);
+    margin: 1rem 0;
 }
 
-nav,
-p,
-section,
-article {
-    margin: 5px;
-    padding: 10px;
-    border: solid 3px rgba(0, 0, 0, 1);
+/* Hero */
+.hero {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: solid 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Overlay title only for hero */
+.hero h1 {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+
+    padding: 16px;
+    text-align: center;
+
+    background-color: rgba(20, 83, 45, 0.7);
     color: white;
-    background-color: var(--accent2-color);
-    font-weight: 600;
+}
+
+/* Overlay article centered WITHOUT transform */
+.hero article {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+
+    width: 85%;
+    margin: 0 auto;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #111;
+
+    border: solid 3px rgba(0, 0, 0, 0.35);
+    padding: 10px;
+
+    /* Helps contain float */
+    overflow: auto;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    border: 3px solid rosybrown;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+/* Sections */
+.history p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Gallery */
+.adventure {
+    margin-top: 2rem;
 }
 
 .gallery {
@@ -88,18 +155,30 @@ article {
     justify-items: center;
 }
 
-.gallery {
-    background: transparent;
-    border: none;
-    padding: 0;
+.gallery figure {
+    width: 100%;
+    text-align: center;
 }
 
-.hero {
-    position: relative;
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-.hero h1 {
-    position: absolute;
+.gallery figcaption {
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    padding: 1rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .socialmedia {
@@ -107,47 +186,7 @@ article {
     gap: 1rem;
 }
 
-.socialmedia a {
-    text-decoration: none;
-}
-
 .socialmedia img {
     width: 32px;
     height: auto;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: solid 10px rgba(0, 0, 0, 0.25);
-}
-
-h1 {
-    top: 15px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent2-color);
-    color: white;
-    /* To help with the contrast */
-}
-
-article {
-    position: relative;
-
-}
-
-.hero article {
-    position: absolute;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    border: 3px solid rosybrown;
-    margin: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    position: absolute;
 }
