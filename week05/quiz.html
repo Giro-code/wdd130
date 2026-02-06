@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Quiz Form</title>
+    <link rel="stylesheet" href="styles/quiz.css">
+</head>
+
+<body>
+    <main class="box">
+        <h1>
+            ✅Basic HTML and CSS quiz
+        </h1>
+        <form class="box">
+
+            <div class="quiz-item">
+                <label for="q1">1. What's the customer name?</label>
+                <input type="text" id="q1" name="q1" required>
+            </div>
+            <div class="quiz-item">
+                <label for="q2">2. Is this person planning to MAGA?</label>
+                <textarea name="q2" id="q2" required></textarea>
+            </div>
+            <div class="quiz-item">
+                <label for="q3">3. Which way would you like to use to MAGA?</label>
+                <select id="q3" name="q3" required>
+                    <option value="" selected disabled>Choose one filthy pocket
+                    </option>
+                    <option value="a">Being part of ICE</option>
+                    <option value="b">Working with Trump</option>
+                    <option value="c">Looking for Oil in other countries</option>
+                </select>
+            </div>
+            <div class="quiz-item">
+                <label for="q4">4. Whats the code for the bombs?</label>
+                <code>margin: 10px 5px 15px;</code>
+                <input type="text" id="q4" name="q4" required>
+            </div>
+            <button type="submit">Submit quiz to recruit</button>
+        </form>
+    </main>
+</body>
+
+</html>
