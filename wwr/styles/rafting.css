@@ -201,6 +201,19 @@ button:hover {
     font-size: 22px;
 }
 
+.map-container iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .map-container iframe {
+        height: 260px;
+    }
+}
+
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
