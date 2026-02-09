@@ -1,7 +1,7 @@
 :root {
     /* Backgrounds */
     --primary-color: #E6E9E2;
-    --secondary-color: #0F766E;
+    --secondary-color: #509B95;
 
     /* Text colors */
     --text-dark: #1F2933;
@@ -9,7 +9,7 @@
 
     /* Accent colors */
     --accent1-color: #1F2933;
-    --accent2-color: #14532D;
+    --accent2-color: #729881;
 
     --heading-color: #1F2933;
     --heading-font: 'Oswald', sans-serif;
