@@ -23,179 +23,248 @@
     text-decoration: none;
 }
 
+/* ====== Basic ====== */
 body {
-    background-color: var(--primary-color);
     font-family: var(--body-font);
+    background-color: var(--primary-color);
     color: var(--text-dark);
 }
 
-/* Layout width */
 main,
 footer {
     width: 90%;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
-/* Header */
+/* ====== Header ====== */
 header {
     background-color: var(--secondary-color);
-    color: var(--text-light);
-    border: solid 10px rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    padding: 18px;
 
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 16px;
 }
 
 header img {
-    width: 140px;
+    width: 130px;
     height: auto;
+    display: block;
 }
 
 header nav {
     display: flex;
-    justify-content: flex-end;
+    gap: 12px;
     flex-wrap: wrap;
-    gap: 1rem;
-    /* antes 16px */
 }
 
 header nav a {
-    background: white;
+    background-color: white;
     color: #111;
-    padding: 0.5rem 1rem;
-    border: 2px solid rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    padding: 8px 14px;
     border-radius: 4px;
     font-weight: 600;
-    padding: 0.4rem 0.8rem;
 }
 
-/* Headings */
-h1 {
+/* hover simple (novato) */
+header nav a:hover {
+    background-color: #f2f2f2;
+}
+
+/* ====== Company info ====== */
+.company-info {
+    text-align: center;
+    margin: 28px 0 18px;
+}
+
+.company-info h1 {
     font-family: var(--heading-font);
     color: var(--heading-color);
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-h2 {
+.company-info p {
+    line-height: 1.4;
+}
+
+/* ====== Map + Form ====== */
+.contact-section {
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    margin: 18px 0 28px;
+}
+
+.map-container {
+    width: 55%;
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    background-color: #ddd;
+}
+
+.map-container img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-form {
+    width: 45%;
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    background-color: white;
+    padding: 16px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group > label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: var(--body-font);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dcdcdc;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 800px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .map-container,
+    .contact-form {
+        width: 100%;
+    }
+
+    .map-container img {
+        height: 260px;
+    }
+}
+
+/* ====== Team ====== */
+.team-section {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    padding: 18px;
+    margin-bottom: 24px;
+}
+
+.team-section h2 {
     font-family: var(--heading-font);
     color: var(--accent1-color);
-    margin: 1rem 0;
-}
-
-/* Hero */
-.hero {
-    position: relative;
-    margin-top: 1rem;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: solid 10px rgba(0, 0, 0, 0.25);
-}
-
-/* Overlay title only for hero */
-.hero h1 {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    right: 0;
-
-    padding: 10px;
     text-align: center;
-
-    background-color: rgba(20, 83, 45, 0.7);
-    color: white;
-}
-
-@media (min-width: 751px) {
-    .hero article {
-        position: absolute;
-        top: 35%;
-        left: 0;
-        right: 0;
-        width: 75%;
-        margin: 0 auto;
-        background: rgba(255, 255, 255, 0.85);
-        color: #111;
-        font-size: 120%;
-
-        border: solid 3px rgba(0, 0, 0, 0.35);
-        padding: 10px;
-    }
-
-    .hero article p {
-        line-height: 1.4;
-    }
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    margin: 1rem;
-    border: 3px solid rosybrown;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-}
-
-/* Sections */
-.history p {
-    margin-bottom: 1rem;
-    line-height: 1.5;
-}
-
-/* Gallery */
-.adventure {
-    margin-top: 2rem;
+    margin-bottom: 14px;
+    font-size: 22px;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 14px;
     justify-items: center;
 }
 
 .gallery figure {
-    margin: 0;
     width: 100%;
+    max-width: 260px;
+    background-color: white;
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    padding: 10px;
     text-align: center;
 }
 
 .gallery img {
     width: 100%;
-    height: auto;
+    height: 170px;
+    object-fit: cover;
     display: block;
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: #ddd;
+    border: 1px solid rgba(0, 0, 0, 0.35);
 }
 
 .gallery figcaption {
-    margin-top: 0.5rem;
+    margin-top: 8px;
+    font-weight: 700;
 }
 
-/* Footer */
+@media (min-width: 800px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ====== Footer ====== */
 footer {
-    margin-top: 2rem;
-    padding: 1rem 0;
     background-color: var(--accent2-color);
+    border: 2px solid rgba(0, 0, 0, 0.35);
+    padding: 16px;
+    margin: 20px auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 14px;
+}
+
+footer p {
+    color: var(--text-light);
+    font-weight: 600;
 }
 
 .socialmedia {
     display: flex;
-    gap: 1rem;
-}
-
-.socialmedia a {
-    text-decoration: none;
+    gap: 10px;
 }
 
 .socialmedia img {
-    width: 32px;
-    height: auto;
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    display: block;
 }

@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="author" content="Elio Diaz">
-    <meta name="Contact"
-      content="This is the contact form for inquiries, messages, and direct communication with our team.">
-    <link rel="stylesheet" href="styles/contact.css">
+    <meta name="description"
+      content="Contact White Water Rafting Dominican Republic for reservations, questions, and suggestions. We reply with trip details, safety info, and support.">
+
+    <link rel="stylesheet" href="styles/rafting.css">
     <title>Contact Us - White Water Rafting Dominican Republic</title>
 </head>
 
@@ -51,12 +53,23 @@
                     <div class="form-group">
                         <label>Message Purpose</label>
                         <div class="radio-group">
-                            <label><input type="radio" name="purpose" value="general"> General
-                                Inquiry</label>
-                            <label><input type="radio" name="purpose" value="reservation">
-                                Reservation Question</label>
-                            <label><input type="radio" name="purpose" value="website"> Website
-                                Suggestion</label>
+                            <label for="purpose-general">
+                                <input type="radio" id="purpose-general" name="purpose"
+                                  value="general">
+                                General Inquiry
+                            </label>
+
+                            <label for="purpose-reservation">
+                                <input type="radio" id="purpose-reservation" name="purpose"
+                                  value="reservation">
+                                Reservation Question
+                            </label>
+
+                            <label for="purpose-website">
+                                <input type="radio" id="purpose-website" name="purpose"
+                                  value="website">
+                                Website Suggestion
+                            </label>
                         </div>
                     </div>
 
@@ -67,8 +80,8 @@
                     </div>
 
                     <div class="form-group checkbox-group">
-                        <label>
-                            <input type="checkbox" name="newsletter">
+                        <label for="newsletter">
+                            <input type="checkbox" id="newsletter" name="newsletter">
                             Please Subscribe me to the monthly newsletter
                         </label>
                     </div>
